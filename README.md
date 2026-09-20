@@ -23,9 +23,9 @@ During active incident response, rapid log collection and correlation are critic
 
 | Script Name | Environment | Primary Function |
 | :--- | :--- | :--- |
-| `auth_triage.sh` | Linux (Bash) | Parses authentication logs for brute-force vectors and failed login peaks. |
-| `ioc_scanner.sh` | Linux (Bash) | Computes SHA-256 hashes of running processes and directory contents. |
-| `sysmon_parser.ps1` | Windows (PowerShell) | Queries Event Viewer for process creation (Event ID 1) and network connections (Event ID 3). |
+| [`auth_triage.sh`](./scripts/auth_triage.sh) | Linux (Bash) | Parses authentication logs for brute-force vectors and failed login peaks. |
+| [`ioc_scanner.sh`](./scripts/ioc_scanner.sh) | Linux (Bash) | Computes SHA-256 hashes of running processes and directory contents. |
+| [`sysmon_parser.ps1`](./scripts/sysmon_parser.ps1) | Windows (PowerShell) | Queries Event Viewer for process creation (Event ID 1) and network connections (Event ID 3). |
 
 ---
 
@@ -39,8 +39,7 @@ During active incident response, rapid log collection and correlation are critic
 
 Clone the repository and assign execution permissions to the scripts:
 
-```bash
-git clone [https://github.com/jaybean167/SOC-Incident-Triage-and-Log-Analysis.git](https://github.com/jaybean167/SOC-Incident-Triage-and-Log-Analysis.git)
+git clone https://github.com/jaybean167/SOC-Incident-Triage-and-Log-Analysis.git
 cd SOC-Incident-Triage-and-Log-Analysis
 chmod +x scripts/*.sh
 ./scripts/auth_triage.sh
